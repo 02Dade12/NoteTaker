@@ -4,18 +4,15 @@
 const path = require('path');
 const router = require('express').Router();
 const fs = require('fs');
-// ROUTING
 
 // => HTML GET Requests
-// Below code handles when users "visit" a page.
-// In each of the below cases the user is shown an HTML page of content
-
 router.get('/api/notes', (req, res) => {
     let noteData = fs.readFileSync(path.join(__dirname, '../Develop/db/db.json'), "utf-8");
     noteData = JSON.parse(noteData);    
     res.json(noteData);
 });
 
+// => HTML POST Requests
 router.post('/api/notes', (req, res) => {
     console.log(req.body);
     let userInput = req.body;
@@ -28,9 +25,11 @@ router.post('/api/notes', (req, res) => {
     res.json(noteData);
 });
 
-// router.delete('/api/notes', (req, res) => {
-    
-// });
+router.delete('/api/notes', (req, res) => {
+    let note = findById(req.params.id, notes);
+    removeNote(note, notes);
+    res.json();
+});
 
 module.exports = router;
 
