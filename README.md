@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Taker that can be used to write and save notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file. The application’s front end was already been created, I the back end by connecting the front end to the backend and deployed this entire application to Heroku.
+This application is a Note Taker that can be used to write and save notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file. The application’s front end was already created, I completed the project by building the back end and connecting the front end and deployed this entire application to Heroku.
 
 
 ## User Story
