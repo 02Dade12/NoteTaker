@@ -7,7 +7,7 @@ const fs = require('fs');
 
 // => HTML GET Requests
 router.get('/api/notes', (req, res) => {
-    let noteData = fs.readFileSync(path.join(__dirname, '../Develop/db/db.json'), "utf-8");
+    let noteData = fs.readFileSync(path.join(__dirname, '../db/db.json'), "utf-8");
     noteData = JSON.parse(noteData);    
     res.json(noteData);
 });
@@ -16,11 +16,11 @@ router.get('/api/notes', (req, res) => {
 router.post('/api/notes', (req, res) => {
     console.log(req.body);
     let userInput = req.body;
-    let noteData = fs.readFileSync(path.join(__dirname, '../Develop/db/db.json'), "utf-8");
+    let noteData = fs.readFileSync(path.join(__dirname, '../db/db.json'), "utf-8");
     noteData = JSON.parse(noteData);    
     noteData.push(userInput);
     noteData = JSON.stringify(noteData);
-    fs.writeFileSync(path.join(__dirname, '../Develop/db/db.json'), noteData, "utf-8");
+    fs.writeFileSync(path.join(__dirname, '../db/db.json'), noteData, "utf-8");
     noteData = JSON.parse(noteData);    
     res.json(noteData);
 });
