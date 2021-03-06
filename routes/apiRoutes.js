@@ -26,9 +26,7 @@ router.post('/api/notes', (req, res) => {
 });
 
 router.delete('/api/notes', (req, res) => {
-    let note = findById(req.params.id, notes);
-    removeNote(note, notes);
-    res.json();
+    
 });
 
 module.exports = router;

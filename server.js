@@ -5,10 +5,12 @@ const express = require('express');
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
 const path = require('path');
+
 // Tells node that we are creating an "express" server
 const app = express();
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
+
 // Sets an initial port. We"ll use this later in our listener
 const PORT = process.env.PORT || 8080;
 
