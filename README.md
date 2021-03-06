@@ -34,4 +34,5 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Example Image
 
+![Note Taker Home](./Assets/homeScreen.png)
 ![Note Taker](./Assets/screenshot.png)
